@@ -9,4 +9,4 @@ pizzas.times do
   puts "You've ordered a pizza with #{toppings} toppings."
 end
 
-puts "You ordered a total of #{pizzas} with a grand total of #{toppings_total} toppings"
+puts "You ordered a total of #{pizzas} pizzas with a grand total of #{toppings_total} toppings"
