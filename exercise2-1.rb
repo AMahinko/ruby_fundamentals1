@@ -26,7 +26,9 @@ if tip_percent < 20.00
   tip_percent = 20.00
   puts "Sorry, didn't catch that. Did you mean 20%? (y/n)"
   reply = gets.chomp
-  if reply == "N" || "n"
+  if reply == "n"
+    puts "Yeah, I think you meant 20%."
+  elsif reply == "N"
     puts "Yeah, I think you meant 20%."
   end
 end

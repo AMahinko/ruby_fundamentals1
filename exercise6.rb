@@ -1,4 +1,5 @@
 distance = 0
+input = nil
 
 puts "Oh. Decided to finally go outside?"
 sleep 2
@@ -17,22 +18,22 @@ sleep 1
 puts "Anyway, you've travelled a vastly impressive zero kilometers today (not counting your many trips to the fridge, mind)."
 puts "Not running today, I assume? Baby steps, now. (input walk/run/home)."
 
-loop do
-  input = gets.to_s
-  if input == "walk" || "Walk"
-    distance += 1
+while input != "done" do
+  input = gets.chomp.to_s
+  if input == "walk"
+    distance = distance + 1
     puts "You've travelled a powerfully inspiring #{distance} kilometers today."
-  elsif input == "run" || "Run"
-    distance += 5
+  elsif input == "run"
+    distance = distance + 5
     puts "Your heaving carcass has managed to carry you #{distance} kilometers. I'm proud of you. Really."
-  elsif input == "home" || "Home"
+  elsif input == "home"
     puts "Already? Well you managed to travel #{distance} kilometers at least."
     sleep 1
     puts "Incidentally, you were noticed by 1 sexually desirable entity."
-    sleep 2
-    puts "Your mother."
     sleep 3
-    puts "Back to work, now!"
-    break
+    puts "Oh, nevermind. Let's not disappoint the poor thing twice. Back to work!"
+    input = "done"
+  else
+    puts "Your pudgy fingers appear to have mis-typed. Try again. You can do it."
   end
 end
