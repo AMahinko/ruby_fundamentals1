@@ -12,7 +12,7 @@ while number < 100 do
     number += 1
   else
     puts number
-    number != 1
+    number += 1
   end
 
 end
